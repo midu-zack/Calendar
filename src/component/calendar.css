@@ -1,0 +1,82 @@
+/* calendar.css */
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #bdbdbd;
+}
+
+/* Calendar Container */
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Calendar */
+.calendar {
+  max-width: 300px;
+}
+
+/* Event Form */
+.event-form {
+  margin-top: 20px;
+}
+
+.event-form h3 {
+  margin-bottom: 10px;
+}
+
+.event-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.event-input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 8px 16px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #000000;
+}
+
+/* Event List */
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.event-item {
+  position: relative;
+  padding: 8px;
+  margin-bottom: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff0000;
+}

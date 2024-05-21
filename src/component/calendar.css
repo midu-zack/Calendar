@@ -1,25 +1,22 @@
-/* calendar.css */
-
+ 
 /* Body */
 body {
   font-family: Arial, sans-serif;
   background-color: #bdbdbd;
 }
 
-/* Calendar Container */
+ 
 .calendar-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }
-
-/* Calendar */
+ 
 .calendar {
   max-width: 300px;
 }
-
-/* Event Form */
+ 
 .event-form {
   margin-top: 20px;
 }
@@ -53,8 +50,7 @@ body {
 .submit-button:hover {
   background-color: #000000;
 }
-
-/* Event List */
+ 
 .event-list {
   list-style: none;
   padding: 0;

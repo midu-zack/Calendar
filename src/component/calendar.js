@@ -1,4 +1,3 @@
-// Calendar.js
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
@@ -13,6 +12,12 @@ function MyCalendar() {
     setDate(date);
   };
 
+  const onActiveStartDateChange = ({ activeStartDate }) => {
+    const firstDayOfMonth = new Date(activeStartDate.getFullYear(), activeStartDate.getMonth(), 1);
+    setDate(firstDayOfMonth);
+    setEventText('');
+  };
+
   const handleInputChange = event => {
     setEventText(event.target.value);
   };
@@ -21,14 +26,11 @@ function MyCalendar() {
     event.preventDefault();
     const formattedDate = date.toDateString();
 
-    // Check if events already exist for this date
     const existingEvents = events[formattedDate] || [];
     const updatedEvents = [...existingEvents, eventText];
 
-    // Update the events state with the new event for the selected date
     setEvents({ ...events, [formattedDate]: updatedEvents });
 
-    // Clear the event text input
     setEventText('');
   };
 
@@ -45,6 +47,7 @@ function MyCalendar() {
         <Calendar
           onChange={onChange}
           value={date}
+          onActiveStartDateChange={onActiveStartDateChange}
         />
       </div>
       <div className="event-form">
